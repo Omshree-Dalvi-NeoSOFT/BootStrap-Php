@@ -1,5 +1,5 @@
 <?php 
-
+    // defining the profile details.
  $profiles = [
      ["image"=>"Photo/profile1.jpg","heading"=>"Olivia Emma","bio"=>"Daily affirmations have long been used to boost self-esteem. They compel people to start their days on the right foot. But while letting a smile be your umbrella might fortify your positive attitude, it’s not going to inspire your business ventures.","link"=>""],
      ["image"=>"Photo/profile2.jpg","heading"=>"Jocab Biden","bio"=>"To all the entrepreneurs and go-getters out there, these 30 inspiring business quotes are for you. Now, get out there and change the world—one project at a time!","link"=>""],
@@ -17,6 +17,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- include head and other script/ link files -->
 <?php include('head.php')?>
 </head>
 <body>
@@ -32,7 +33,7 @@
     <a class="btn btn-primary btn-lg" href="products.php" role="button">Shop Now</a>
   </p>
 </div>
-
+    <!-- Profile and bio details -->
     <?php 
         foreach($profiles as $val){
     ?>
@@ -53,6 +54,7 @@
 
     </section>
     <section class="container-fluid">
+        <!-- footer file -->
     <?php include('footer.php')?>
     </section>
     <?php include('foot.php')?>

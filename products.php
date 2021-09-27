@@ -1,4 +1,6 @@
 <?php 
+
+// Products List and details.
 $products = [
     ["id"=>1,"pname"=>"Red Canvas Shoe","price"=>500,"quality"=>5,"image"=>"Photo/shoe1.jpg"],
     ["id"=>2,"pname"=>"Hand Bag","price"=>200,"quality"=>5,"image"=>"Photo/bag2.jpg"],
@@ -19,13 +21,15 @@ $products = [
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php include('head.php')?>
+            <!-- Including head tags and other scripting files. -->
+<?php include('head.php')?>     
 </head>
 <body>
     <?php include('nav.php')?>
     <section class="p-4"></section>
     <section class="container">
     <h1 class="text-center">Our Products</h1><br>
+        <!-- define the products on page in row. -->
         <div class='row'>
         <?php 
          foreach($products as $val){
@@ -51,6 +55,7 @@ $products = [
         </div>
     </section>
     <section class="container-fluid">
+        <!-- include footer file, for page footer -->
         <?php include('footer.php')?>
     </section>
     

@@ -1,8 +1,4 @@
-// function selectOper() {
-//   let element = document.getElementById("btn").value;
-//   console.log(element);
-//   document.write(element);
-// }
+
 var arr = [];
 function dis(val) {
   document.getElementById("result").value += val;
@@ -34,6 +30,7 @@ function clr() {
   document.getElementById("result").value = "";
 }
 
+// function that shows calculation history.
 function history(x,y){
     var task = x +" = "+y
     console.log(task)
@@ -48,6 +45,7 @@ function history(x,y){
     })
 }
 
+// function to clear the history.
 function clearHist(){
     var task = document.getElementById('history');
     var li = document.getElementById('li')

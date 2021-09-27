@@ -141,14 +141,20 @@ function input_field($data){
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- include head tags and other script/link tags -->
 <?php include('head.php')?>
 
 </head>
 <body>
+
+  <!-- include navbar -->
     <?php include('nav.php')?>
     <section class="p-4"></section>
     <section class="container">
     <h1 class="text-center">Contact Us</h1><br>
+
+      <!-- Success Msg -->
       <?php 
         if(($errfname != 'is-invalid' && $errlname != 'is-invalid' && $erruname != 'is-invalid' && $errcity != 'is-invalid' && $errstate != 'is-invalid' && $errzip != 'is-invalid' && $errfeedback != 'is-invalid' && $erremail != 'is-invalid' && $errcnumber != 'is-invalid') && ($fname != '')){
           echo '<div class="alert alert-success" role="alert">
@@ -156,10 +162,16 @@ function input_field($data){
             </div>';
         }
       ?>
+
+      <!-- contact us form -->
     <form method="post" class="row g-3">
   <div class="col-md-4">
+
+  <!-- First name -->
     <label for="validationServer01" class="form-label">First name</label>
     <input type="text" class="form-control <?php echo $errfname; ?>" name="fname" id="validationServer01"  >
+    
+    <!-- error msg -->
     <div class="valid-feedback">
       Looks good!
     </div>
@@ -168,8 +180,12 @@ function input_field($data){
     </div>
   </div>
   <div class="col-md-4">
+
+        <!-- last name -->
     <label for="validationServer02" class="form-label">Last name</label>
     <input type="text" class="form-control <?php echo $errlname; ?>" id="validationServer02" name="lname" >
+    
+    <!-- error msg -->
     <div class="valid-feedback">
       Looks good!
     </div>
@@ -178,10 +194,14 @@ function input_field($data){
     </div>
   </div>
   <div class="col-md-4">
+
+      <!-- username -->
     <label for="validationServerUsername" class="form-label">Username</label>
     <div class="input-group has-validation">
       <span class="input-group-text" id="inputGroupPrepend3">@</span>
       <input type="text" class="form-control <?php echo $erruname; ?>" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" name="uname" >
+      
+      <!-- error msg -->
       <div id="validationServerUsernameFeedback" class="invalid-feedback">
         Please choose a username.
       </div>
@@ -191,8 +211,12 @@ function input_field($data){
     </div>
   </div>
   <div class="col-md-6">
+
+  <!-- city -->
     <label for="validationServer03" class="form-label">City</label>
     <input type="text" class="form-control <?php echo $errcity; ?>" id="validationServer03" aria-describedby="validationServer03Feedback" name="city" >
+    
+    <!-- error msg -->
     <div id="validationServer03Feedback" class="invalid-feedback">
       Please provide a valid city.
     </div>
@@ -201,6 +225,8 @@ function input_field($data){
     </div>
   </div>
   <div class="col-md-3">
+
+  <!-- state -->
     <label for="validationServer04" class="form-label">State</label>
     <select class="form-select <?php echo $errstate; ?>" id="validationServer04" aria-describedby="validationServer04Feedback" name="state" >
       <option selected disabled value="Null">Choose...</option>
@@ -241,6 +267,8 @@ function input_field($data){
       <option value="Uttarakhand">Uttarakhand</option>
       <option value="West Bengal">West Bengal</option>
     </select>
+
+    <!-- error msg -->
     <div id="validationServer04Feedback" class="invalid-feedback">
       Please select a valid state.
     </div>
@@ -249,8 +277,12 @@ function input_field($data){
     </div>
   </div>
   <div class="col-md-3">
+
+  <!-- zip code -->
     <label for="validationServer05" class="form-label">Zip</label>
     <input type="text" class="form-control <?php echo $errzip; ?>" id="validationServer05" aria-describedby="validationServer05Feedback" name="zip" >
+    
+    <!-- error msg -->
     <div id="validationServer05Feedback" class="invalid-feedback">
       Please provide a valid zip.
     </div>
@@ -259,8 +291,12 @@ function input_field($data){
     </div>
   </div>
   <div class="col-md-3">
+
+  <!-- contact number -->
     <label for="validationServer01" class="form-label">Contact Number</label>
     <input type="text" class="form-control <?php echo $errcnumber; ?>" name="cnumber" id="validationServer01"  >
+    
+    <!-- error msg -->
     <div class="valid-feedback">
       Looks good !
     </div>
@@ -269,8 +305,12 @@ function input_field($data){
     </div>
   </div>
   <div class="col-md-3">
+
+  <!-- email id -->
     <label for="validationServer02" class="form-label">Email ID</label>
     <input type="email" class="form-control <?php echo $erremail; ?>" id="validationServer02" name="email" >
+    
+    <!-- error msg -->
     <div class="valid-feedback">
       Looks good !
     </div>
@@ -279,8 +319,12 @@ function input_field($data){
     </div>
   </div>
   <div class="col-md-6">
+
+  <!-- feedback -->
     <label for="validationServer05" class="form-label">Feedback</label>
     <textarea class="form-control <?php echo $errfeedback; ?>" id="validationTextarea" placeholder=" example textarea" name="feedback" ></textarea>
+    
+    <!-- error msg -->
     <div id="validationServer05Feedback" class="invalid-feedback">
       Please provide a Feedback !.
     </div>
@@ -295,8 +339,12 @@ function input_field($data){
 </form>
     </section>
     <section class="container-fluid">
+
+        <!-- include footer -->
         <?php include('footer.php')?>
     </section>
+
+    <!-- include script tags -->
     <?php include('foot.php')?>
 </body>
 </html>

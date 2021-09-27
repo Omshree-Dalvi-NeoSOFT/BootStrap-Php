@@ -15,6 +15,7 @@
                 <div class="col-8 border-right">
                     <div class="p-4">
                         <table class="calc">
+                            <!-- Define calculator layout in tabular form -->
                             <tbody>
                                 <tr>
                                     <td colspan="4"><input type="text" style="width: 100%;" class="answer" size="16" id="result" placeholder="0" readonly onblur="clr()"></td>
@@ -77,6 +78,7 @@
             </div>
         </div>
     </section>
+    <!-- call calculator operation script file. -->
     <script src="operation.js"></script>
     </section>
     <section class="container-fluid">

@@ -3,6 +3,8 @@
     // define variables 
     $erremail=$errpass=$crtemail=$crtpass="";
     $status=0;
+    
+    // login credentials  
     $details =[
         "emailid"=>"om@gmail.com",
         "pass"=>"Om@31"
@@ -24,6 +26,8 @@
                     $errpass = "Please Enter Password !";
                 }
                 else{
+
+                    // validate password
                     if($pass == $details['pass']){
                         $crtpass = "Looks good !";
                         $crtemail = "Looks good !";
@@ -51,13 +55,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- include head tags and other scripts/links -->
 <?php include('head.php')?>
 </head>
 <body>
     <section class="p-4"></section>
+
+    <!-- include navbar -->
     <?php include('nav.php')?>
     <section class="container">
         <h1 class="text-center">Login Here</h1><br>
+
+        <!-- success msg. -->
         <?php 
         if($status == 1){
           echo '<div class="alert alert-success" role="alert">
@@ -65,6 +74,8 @@
             </div>';
         }
       ?>
+
+            <!-- login form -->
             <form method="post">
             <div class="input-group input-group-lg">
             <span class="input-group-text" id="inputGroup-sizing-lg">Email - ID</span>
@@ -78,8 +89,12 @@
             </form>
     </section>
     <section class="container-fluid">
+
+        <!-- include footer -->
         <?php include('footer.php')?>
     </section>
+
+    <!-- include script tags. -->
     <?php include('foot.php')?>
 </body>
 </html>
